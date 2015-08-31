@@ -7,8 +7,8 @@ using namespace cv;
 
 int main(void)
 {
-	namedWindow("Window1",WINDOW_NORMAL);
-	namedWindow("Window2",WINDOW_NORMAL);
+	namedWindow("Window1",WINDOW_AUTOSIZE);
+	namedWindow("Window2",WINDOW_AUTOSIZE);
 	Mat img1 = imread("sample.jpeg"), img2;
 	pyrDown(img1, img2);
 	imshow("Window1",img1);
