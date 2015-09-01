@@ -71,12 +71,12 @@ int main(void)
 		waitKey(40);
 	}
 
-	//Code will not work since bgr to hls conversion by OpenCV is quite faulty.
 }
 
 
 
 /*
+// Can do detection on still images / pictures
 int main(void)
 {
 	Mat bgr_input = imread("humans2.jpg");
