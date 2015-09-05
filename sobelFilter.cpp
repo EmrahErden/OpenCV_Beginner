@@ -21,6 +21,16 @@ int main(void)
 	Sobel( gray_image, vertical_derivative, CV_32F,0,1 );
 	imshow("horizontal_derivative", horizontal_derivative);
 	imshow("vertical_derivative", vertical_derivative);
+
+	/*	
+	In OpenCV, given the two partial derivatives we may compute the absolute gradient and
+	the l2norm (gradient) and orientation
+	*/
+	Mat abs_gradient, l2norm_gradient, orientation;
+	abs_gradient = abs(horizontal_derivative) + abs(vertical_derivative);
+	cartToPolar(horizontal_derivative,vertical_derivative,
+	l2norm_gradient, orientation);
+
 	waitKey(0);
 }
 
