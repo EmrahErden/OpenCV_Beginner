@@ -1,12 +1,11 @@
 //g++ -std=c++11 templateMatchingExtended.cpp `pkg-config --libs opencv` -o templateMatchingExtended
 
 /*
-Template matching has been used quite widely; for example, in stereo vision (where we
-are trying to determine how far away objects are on the basis of a stereo pair of images)
-correspondences are sought from one image to the other using very small sub-images; and in
-tracking of moving objects, where we can typically assume that the appearance of an object
-being tracked will change slowly from frame to frame and again can use small templates on
-the moving object.
+WARNING:
+One problem that template matching has is that it is very dependent on the appearance of the
+object of interest being almost the same (ignoring overall lumination) in the template as in
+the search image. Any distortion of this appearance can have quite a significant impact on the
+matching score obtained.
 
 dawson-howe
 */
